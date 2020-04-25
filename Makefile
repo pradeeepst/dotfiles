@@ -24,6 +24,7 @@ endif
 setup-mac:: ## Setup mac
 	@cd $(CONFIG_ROOT)
 ifeq ($(OS),Darwin)
+    @make brew-install
 	@make osx
 	@make brew
 	@make hammerspoon
@@ -53,12 +54,13 @@ azure:: ## Configure azure
 	@curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 	@sudo apt-get install -y apt-transport-https && sudo apt-get update && sudo apt-get install azure-cli
 
-brew:: ## Configure brew Settings
+brew-install:: ## Configure brew Settings
 ifeq ("$(wildcard /usr/local/bin/brew)","")
 	@echo "Installing brew"
 	@curl -fsSL -o /tmp/install https://raw.githubusercontent.com/Homebrew/install/master/install
 	@/usr/bin/ruby /tmp/install
 endif
+brew:: # install sw using brew 
 	@echo "Installing all sw via brew"
 	@brew tap homebrew/bundle
 	@brew bundle --file=brew/Brewfile

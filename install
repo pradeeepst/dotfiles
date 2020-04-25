@@ -32,7 +32,7 @@ require_util git "install git"
 mkdir -p ~/projects/sw/repos/personal && cd "$_"
 if ! [[ -d "${HOME}/projects/sw/repos/personal/dotfiles" ]];
 then
-    git clone https://github.com/ageekymonk/dotfiles.git
+    git clone https://github.com/pradeeest/dotfiles.git
 fi
 
 cd dotfiles
