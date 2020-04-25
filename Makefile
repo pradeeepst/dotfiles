@@ -24,7 +24,7 @@ endif
 setup-mac:: ## Setup mac
 	@cd $(CONFIG_ROOT)
 ifeq ($(OS),Darwin)
-    @make brew-install
+	@make brew-install
 	@make osx
 	@make brew
 	@make hammerspoon
@@ -61,7 +61,7 @@ ifeq ("$(wildcard /usr/local/bin/brew)","")
 	@/usr/bin/ruby /tmp/install
 endif
 
-brew:: # install sw using brew 
+brew:: #install sw using brew 
 	@echo "Installing all sw via brew"
 	@brew tap homebrew/bundle
 	@brew bundle --file=brew/Brewfile
