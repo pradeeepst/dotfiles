@@ -24,8 +24,6 @@ endif
 setup-mac:: ## Setup mac
 	@cd $(CONFIG_ROOT)
 ifeq ($(OS),Darwin)
-	# @make brew-install
-	# @make osx
 	@make brew
 	@make hammerspoon
 endif
