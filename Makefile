@@ -57,8 +57,7 @@ azure:: ## Configure azure
 brew-install:: ## Configure brew Settings
 ifeq ("$(wildcard /usr/local/bin/brew)","")
 	@echo "Installing brew"
-	@curl -fsSL -o /tmp/install https://raw.githubusercontent.com/Homebrew/install/master/install
-	@/usr/bin/ruby /tmp/install
+	@/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 endif
 
 brew:: #install sw using brew 
