@@ -60,6 +60,7 @@ ifeq ("$(wildcard /usr/local/bin/brew)","")
 	@curl -fsSL -o /tmp/install https://raw.githubusercontent.com/Homebrew/install/master/install
 	@/usr/bin/ruby /tmp/install
 endif
+
 brew:: # install sw using brew 
 	@echo "Installing all sw via brew"
 	@brew tap homebrew/bundle
