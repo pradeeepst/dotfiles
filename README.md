@@ -24,3 +24,6 @@ Supported configurations are
 9. surfingkeys
 10. tmux
 11. zsh
+
+### Notes 
+1. Change the key mapping for external keyboards. 
