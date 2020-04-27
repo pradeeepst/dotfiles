@@ -1,5 +1,14 @@
 #!/bin/env bash
 
+# check if brew is installed 
+which -s brew
+if [[ $? != 0 ]] ; then
+    # Install Homebrew
+    echo "brew is not installed"
+    exit 1
+else
+    brew update
+fi
 
 echo "Setup groups"
 sudo dscl . create /Groups/brew
