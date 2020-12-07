@@ -27,3 +27,11 @@ Supported configurations are
 
 ### Notes 
 1. Change the key mapping for external keyboards. 
+2. Change trackpad options
+3. Install little snitch
+4. Install logitech s/w
+5. Helm version manager install.
+6. Install unlimited VPN
+7. Install gcloud command
+
+
